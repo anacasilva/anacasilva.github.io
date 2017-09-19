@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 l12">
+
+      <div class="card-panel profile-box">
+
+        <div class="row">
+
+          <!-- Left Side -->
+          <div class="col s5">
+            <div class="card-image">
+              <div class="profile-img"></div>
+            </div>
+            <div class="profile-social" >
+                {% for item in site.data.settings.social %}
+                  <a class="btn-floating waves-effect waves-light" href="{{ item.link }}" target="_blank">
+                    <i class="{{ item.name }}" aria-hidden="true"></i>
+                  </a>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <!-- End Left Side -->
+
+          <!-- Right Side -->
+          <div class="col s7">
+            <div class="profile-badge">
+              <span class="new badge profile-location" data-badge-caption="Delray Beach, FL, US"></span>
+              <span class="profile-iam">I'm currently @</span>
+            </div>
+            <div class="profile-header">
+              <h1 class="header"><span class="name">Ana C A Silva</span></h1>
+              <h2 class="sub-header">Front-End Developer</h2>
+            </div>
+            <hr>
+            <div class="profile-info">
+              <ul class="profile-list">
+                {% for item in site.data.settings.profile %}
+                <li class="clearfix">
+                  <strong class="key">{{ item.key }}</strong>
+                  <span class="value">{{ item.value }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <!-- End Right Side -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
